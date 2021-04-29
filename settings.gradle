@@ -1,0 +1,4 @@
+include ':domain2'
+include ':data'
+include ':app'
+rootProject.name = "Cean_architectorWithDagger2"
