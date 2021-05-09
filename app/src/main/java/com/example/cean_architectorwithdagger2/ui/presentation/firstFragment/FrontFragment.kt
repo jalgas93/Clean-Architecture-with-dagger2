@@ -39,9 +39,9 @@ class FrontFragment : Fragment(), Injectable {
     }
 
     private fun setupRecyclerView() {
-       // mainViewModel.shareUseCase
+        mainViewModel.getShareData()
         mainViewModel.shareLiveDate.observe(viewLifecycleOwner, Observer {
-            Log.i("jalgas", it.toString())
+            Log.i("jalgas", it.articles.toString())
         })
 
 

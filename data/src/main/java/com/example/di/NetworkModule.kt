@@ -19,41 +19,6 @@ import javax.inject.Singleton
 
 @Module
 class NetworkModule {
-//    @Provides
-//    fun provideOkHttp(): OkHttpClient {
-//        val okHttpClient = OkHttpClient.Builder()
-//        okHttpClient.addInterceptor(HttpLoggingInterceptor())
-//        return okHttpClient.build()
-//    }
-
-//    @Singleton
-//    @Provides
-//    fun provideGson(): Gson {
-//        return GsonBuilder()
-//            .setLenient()
-//            .create()
-//    }
-
-//    @Provides
-//    @Singleton
-//    fun provideGsonConvertFactory(gson: Gson): GsonConverterFactory {
-//        return GsonConverterFactory.create(gson)
-//    }
-
-//    @Provides
-//    @Named("auth_retrofit")
-//    fun provideRetrofit(okHttpClient: OkHttpClient): Retrofit {
-//        return Retrofit.Builder()
-//            .baseUrl(" www.androidapps.com ")
-//            .addConverterFactory(GsonConverterFactory.create())
-//            .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
-//            .client(okHttpClient)
-//            .build()
-//
-//    }
-
-
-
 
     @Provides
     @Singleton
@@ -105,4 +70,5 @@ class NetworkModule {
     ): T {
         return createRetrofit(okHttpClient, converterFactory).create(clazz)
     }
+
 }

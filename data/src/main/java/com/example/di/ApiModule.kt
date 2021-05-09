@@ -1,6 +1,9 @@
 package com.example.di
 
+import androidx.room.Room
 import com.example.apiService.ApiService
+import com.example.db.AppDatabase
+import com.example.db.NewsDao
 import com.example.mappers.ShareMapper
 import com.example.repo.RemoteRepoImpl
 
@@ -40,6 +43,9 @@ class ApiModule {
     fun provideShareMapper():ShareMapper{
         return ShareMapper()
     }
+
+
+
 
 
 }
